@@ -38,7 +38,7 @@ Networking:
   for public network bridge
   For this please select the interface which is connected to router
 
-  The prompt will look something like this:
+  The prompt will look something like this on windows:
 
     ==> k8s-master: Clearing any previously set network interfaces...
     ==> k8s-master: Available bridged network interfaces:
@@ -52,6 +52,31 @@ Networking:
         k8s-master: Adapter 1: nat
         k8s-master: Adapter 2: bridged
         k8s-master: Adapter 3: hostonly
+
+  The prompt will look something like this on Mac:
+
+    ==> k8s-master: Clearing any previously set network interfaces...
+    ==> k8s-master: Available bridged network interfaces:
+    1) en0: Wi-Fi (AirPort)
+    2) en5: USB Ethernet(?)
+    3) p2p0
+    4) awdl0
+    5) llw0
+    6) en3: Thunderbolt 1
+    7) en1: Thunderbolt 2
+    8) en4: Thunderbolt 3
+    9) en2: Thunderbolt 4
+    10) en7: USB 10/100/1000 LAN
+    11) bridge0
+    ==> k8s-master: When choosing an interface, it is usually the one that is
+    ==> k8s-master: being used to connect to the internet.
+    ==> k8s-master:
+        k8s-master: Which interface should the network bridge to? 1
+    ==> k8s-master: Preparing network interfaces based on configuration...
+        k8s-master: Adapter 1: nat
+        k8s-master: Adapter 2: bridged
+        k8s-master: Adapter 3: hostonly
+
 
 Running the VMs:
   For firing up the VMs just login to each directory
